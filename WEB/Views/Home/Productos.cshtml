@@ -1,0 +1,303 @@
+﻿@model WEB.Models.Usuario
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Site</title>
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/style.css" rel="stylesheet" />
+    <link href="~/css/font.css" rel="stylesheet" />
+    <link href="~/css/main.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container-fluid" style="overflow: hidden;">
+        <!--Header-->
+        <div class="row">
+            <nav class="navbar navbar-expand-lg navbar-light w-100">
+                <a class="navbar-brand" href="#"> <img src="~/img/WhatsApp Image 2021-04-15 at 2.05.01 AM.jpeg" />  A&C Solution</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" @Html.ActionLink("INICIO", "Home", "Home")</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"style="background-color:darkgreen"  @Html.ActionLink("SOFTWARE", "Productos", "Home")</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                OTROS SERVICIOS
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" @Html.ActionLink("DESARROLLO WEB", "Web", "Home")</a>
+                                <a class="dropdown-item" @Html.ActionLink("DESARROLLO DE PROGRAMAS", "programas", "Home")</a>
+                                <a class="dropdown-item" @Html.ActionLink("DESARROLLO DE APP MOVILES", "aplicaciones", "Home")</a>
+                                <a class="dropdown-item" @Html.ActionLink("CURSOS DE PROGRAMACION", "cursoP", "Home")</a>
+                                <a class="dropdown-item" @Html.ActionLink("CURSOS DE ASP.WEB CORE", "cursoW", "Home")</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" @Html.ActionLink("SOPORTE TECNICO", "soporte", "Home")</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" @Html.ActionLink("NOSOTROS", "Nosotros", "Home")</a>
+                        </li>
+
+                    </ul>
+                  
+                    <form class="form-inline my-2 my-lg-0">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">BUSCAR</button>
+                        <a class="btn btn-outline-success my-2 my-sm-0" href="Index" style="background-color:yellow">Cerrar Secion</a>
+                    </form>
+                </div>
+            </nav>
+        </div>
+        <!--End Header-->
+        @if (System.Web.HttpContext.Current.User.Identity.IsAuthenticated)
+        {
+            <H3 style="color: white;">Conoce nuestros productos</H3>
+        }
+        else
+        {
+            <H3 style="color: white;">prueba</H3>
+        }
+       <div class="container p-0">
+            <div class="row">
+                <div class="card m-2" style="width: 35rem; background-color: #605d5d; color: white;">
+                    <img src="~/img/nosotros/pbanco3.png" style="width: 100%;height: 300px;" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <span class="card-title">Programa de banco</span>
+                        <br>
+                        <span class="card-text" style="font-size: 0.8em;color:rgba(255,255,255,0.5);"><strong>Desde <s>59.99 US$</s></strong></span>
+                        <br>
+                        <span class="card-text" style="font-size: 1.5em;">19.97 US$</span>
+                        <br>
+                        <span class="card-text" style="font-size: 0.8em;color: #7ED321;"><strong>Ahorra 67%</strong></span>
+                        <br>
+                        <a class="btn btn-primary w-100" style="color:white;font-weight: 700;" @Html.ActionLink("VER DETALLE", "Dbanco", "Home")</a>
+                    </div>
+                </div>
+                <div class="card m-2" style="width: 35rem; background-color: #605d5d; color: white;">
+                    <img src="~/img/Programs/pcolegio2.png" style="width: 100%;height: 300px;" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <span class="card-title">Programa para colegios</span>
+                        <br>
+                        <span class="card-text" style="font-size: 0.8em;color:rgba(255,255,255,0.5);"><strong>Desde <s>180.99 US$</s></strong></span>
+                        <br>
+                        <span class="card-text" style="font-size: 1.5em;">126.69 US$</span>
+                        <br>
+                        <span class="card-text" style="font-size: 0.8em;color: #7ED321;"><strong>Ahorra 30%</strong></span>
+                        <br>
+                        <a class="btn btn-primary w-100" style="color:white;font-weight: 700;" @Html.ActionLink("VER DETALLE", "Dcolegio", "Home")</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="card m-2" style="width: 35rem; background-color: #605d5d; color: white;">
+
+                    <img src="~/img/Programs/pcontabilidad2.png" style="width: 100%;height: 300px;" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <span class="card-title">Programa de Contabilidad Gerencial</span>
+                        <br>
+                        <span class="card-text" style="font-size: 0.8em;color:rgba(255,255,255,0.5);"><strong>Desde <s>259.99 US$</s></strong></span>
+                        <br>
+                        <span class="card-text" style="font-size: 1.5em;">181.99 US$</span>
+                        <br>
+                        <span class="card-text" style="font-size: 0.8em;color: #7ED321;"><strong>Ahorra 50%</strong></span>
+                        <br>
+                        <a class="btn btn-primary w-100" style="color:white;font-weight: 700;" @Html.ActionLink("VER DETALLE", "Dcon", "Home")</a>
+                    </div>
+                </div>
+
+                <div class="card m-2" style="width: 35rem; background-color: #605d5d; color: white;">
+
+                    <img src="~/img/Programs/pvmax2.png" style="width: 100%;height: 300px;" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <span class="card-title">Programa para gestion de autos</span>
+                        <br>
+                        <span class="card-text" style="font-size: 0.8em;color:rgba(255,255,255,0.5);"><strong>Desde <s>58.99 US$</s></strong></span>
+                        <br>
+                        <span class="card-text" style="font-size: 1.5em;">41.29 US$</span>
+                        <br>
+                        <span class="card-text" style="font-size: 0.8em;color: #7ED321;"><strong>Ahorra 70%</strong></span>
+                        <br>
+                        <a class="btn btn-primary w-100" style="color:white;font-weight: 700;" @Html.ActionLink("VER DETALLE", "Dvmax", "Home")</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="card m-2" style="width: 35rem; background-color: #605d5d; color: white;">
+
+                    <img src="~/img/Programs/clinic.png" style="width: 100%;height: 300px;" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <span class="card-title">Programa de Clinica</span>
+                        <br>
+                        <span class="card-text" style="font-size: 0.8em;color:rgba(255,255,255,0.5);"><strong>Desde <s>250 US$</s></strong></span>
+                        <br>
+                        <span class="card-text" style="font-size: 1.5em;">200 US$</span>
+                        <br>
+                        <span class="card-text" style="font-size: 0.8em;color: #7ED321;"><strong>Ahorra 20%</strong></span>
+                        <br>
+                        <a class="btn btn-primary w-100" style="color:white;font-weight: 700;" @Html.ActionLink("VER DETALLE", "Dodontologia", "Home")</a>
+                    </div>
+                </div>
+
+                <div class="card m-2" style="width: 35rem; background-color: #605d5d; color: white;">
+
+                    <img src="~/img/Programs/download.png" style="width: 100%;height: 300px;" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <span class="card-title">Control de renta de automoviles</span>
+                        <br>
+                        <span class="card-text" style="font-size: 0.8em;color:rgba(255,255,255,0.5);"><strong>Desde <s>350 US$</s></strong></span>
+                        <br>
+                        <span class="card-text" style="font-size: 1.5em;">210 US$</span>
+                        <br>
+                        <span class="card-text" style="font-size: 0.8em;color: #7ED321;"><strong>Ahorra 40%</strong></span>
+                        <br>
+                        <a class="btn btn-primary w-100" style="color:white;font-weight: 700;" @Html.ActionLink("VER DETALLE","Drenta", "Home")</a>
+                    </div>
+                </div>    
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <!--INICIO DEL FOOTER-->
+    <div class="footer" style="margin:0">
+        <!--INICIO Footer 2-->
+        <footer class="page-footer font-small blue pt-4" style="color: white;">
+
+            <!-- Footer Links -->
+            <div class="container-fluid text-center text-md-left">
+
+                <!-- Grid row -->
+                <div class="row">
+
+                    <!-- Grid column -->
+                    <div class="col-md-6 mt-md-0 mt-3">
+
+                        <!-- Content -->
+                        <h5 class="text-uppercase">NUESTRAS REDES SOCIALES</h5>
+                        <p>CONTACTANOS PARA MAS INFORMACION ACERCA DE NUESTROS PROYECTOS</p>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <hr class="clearfix w-100 d-md-none pb-3">
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 mb-md-0 mb-3">
+
+                        <!-- Links -->
+                        <h5 class="text-uppercase">ENCUENTRANOS EN</h5>
+
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#!">Facebook</a>
+                            </li>
+                            <li>
+                                <a href="#!">WHATSAPP</a>
+                            </li>
+                            <li>
+                                <a href="#!">CORREO</a>
+                            </li>
+                            <li>
+                                <a href="#!">TELEFONO</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <!-- Grid column -->
+                    <!-- Grid column -->
+                    <div class="col-md-3 mb-md-0 mb-3">
+
+                        <!-- Links -->
+                        <h5 class="text-uppercase">CONTANTENOS</h5>
+
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#!">A&CSolution</a>
+                            </li>
+                            <li>
+                                <a href="#!">829-000-0000</a>
+                            </li>
+                            <li>
+                                <a href="#!">A&CSolution@gmail.com</a>
+                            </li>
+                            <li>
+                                <a href="#!">809-000-0000</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <!-- Grid column -->
+
+                </div>
+                <!-- Grid row -->
+
+            </div>
+            <!-- Footer Links -->
+           
+        </footer>
+    </div>
+    <div id="overlay" style="display: none; position: absolute; top: 0; left: 0; width: 100%; height: 242%; background: black; opacity: 0.5;">
+    </div>
+    <div id="sidebar" class="fadeIn animated" style="display: none;position: absolute; top: 0; right: 0; width: 35%; height: 242%; background:gray;">
+        <ul>
+            <li>hola</li>
+            <li>prueba</li>
+        </ul>
+        <button onclick="cerrar_sidebar()">
+            Cerrar Sidebar
+        </button>
+    </div>
+    <!-- CONTACTENOS ICONOS-->
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">
+        <div class="social-bar">
+            <a href="https://www.facebook.com" class="icon icon-facebook" target="_blank"></a>
+            <a href="https://twitter.com" class="icon icon-twitter" target="_blank"></a>
+            <a href="https://www.youtube.com" class="icon icon-youtube" target="_blank"></a>
+            <a href="https://www.instagram.com" class="icon icon-instagram" target="_blank"></a>
+        </div>
+        © 2021 Copyright:
+        <a href="https://mdbootstrap.com/education/bootstrap/">A&C Solution</a>
+    </div>
+
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Upps..</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    PARA VER MAS CONTENIDO TENDRAS QUE INICIAR SESION
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" @Html.ActionLink("DESARROLLO DE APP MOVILES", "Login", "Home")>CERRAR</button>
+                    <button type="button" class="btn btn-primary">INICIAR SECION</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/js/sidebar.js"></script>
+    <script src="~/js/jquery-3.4.1.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+</body>
+</html>

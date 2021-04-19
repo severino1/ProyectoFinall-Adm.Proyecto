@@ -1,0 +1,148 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>INFO</title>
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/122.css" rel="stylesheet" />
+    <link href="~/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/css/Style2.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="container-fluid" style="overflow: hidden;">
+        <!--Header-->
+        <div class="row">
+            <nav class="navbar navbar-expand-lg navbar-light w-100">
+                <a class="navbar-brand" href="#"><img src="~/img/WhatsApp Image 2021-04-15 at 2.05.01 AM.jpeg"/>A&C Solution</a>
+                <button class="navbar-toggler"type="button"data-toggle="collapse"data-target="#navbarSupportedContent"aria-controls="navbarSupportedContent"aria-expanded="false"aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse"id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" @Html.ActionLink("INICIO", "Home", "Home")</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" @Html.ActionLink("SOFTWARE", "Productos", "Home")</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                OTROS SERVICIOS
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" @Html.ActionLink("DESARROLLO WEB", "Web", "Home")</a>
+                                <a class="dropdown-item" @Html.ActionLink("DESARROLLO DE PROGRAMAS", "programas", "Home")</a>
+                                <a class="dropdown-item" @Html.ActionLink("DESARROLLO DE APP MOVILES", "aplicaciones", "Home")</a>
+                                <a class="dropdown-item" @Html.ActionLink("CURSOS DE PROGRAMACION", "cursoP", "Home")</a>
+                                <a class="dropdown-item" @Html.ActionLink("CURSOS DE ASP.WEB CORE", "cursoW", "Home")</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" @Html.ActionLink("SOPORTE TECNICO", "soporte", "Home")</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" @Html.ActionLink("NOSOTROS", "Nosotros", "Home")</a>
+                        </li>
+
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">BUSCAR</button>
+                        <a class="btn btn-outline-success my-2 my-sm-0" href="Index" style="background-color:yellow">Cerrar Secion</a>
+                    </form>
+                </div>
+            </nav>
+        </div>
+
+        <div class="container text-center pt-5">
+            <h1 class="display-4">Acerca de Nosotros <i class="fa fa-thumbs-o-up"></i></h1>
+            <p class="lead"><i class="fa fa-youtube-play mr-2 text-danger"></i>https://www.youtube.com/watch?v=C-Bivj9PLXk</p>
+        </div> <!-- Fin suscripción -->
+        <!-- inicio de card -->
+        <div class="container">
+            <div class="card-deck">
+               
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="~/img/fondo-1.png" alt="Card image cap">
+                    <<div class="text-center">
+    <img src="~/img/nosotros/88011914_1777457649052018_2053352683724603392_n.jpg" alt="" class="img-fluid yoimagen rounded-circle" height="100px" width="100px">
+</div>
+                    <div class="card-block">
+                        <h4 class="card-title">Christopher Severino F.</h4>
+                        <p class="card-text">Desarrollador de Software capacitado para cualquier entorno</p>
+                    </div>
+                    <div class="card-footer text-center">
+                        <a href="https://web.facebook.com/cristopher.severino.1"><i class="fa fa-facebook mx-2"></i></a>
+                        <a href="https://www.instagram.com/cristopherseverino82/"><i class="fa fa-instagram mx-2"></i></a>
+                        <a href="https://www.youtube.com"><i class="fa fa-youtube-play mx-2"></i></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="~/img/fondo-1.png" alt="Card image cap">
+                    <div class="text-center">
+                        <img src="~/img/nosotros/128888685_3753714944674138_828574267891451573_n.jpg" alt="" class="img-fluid yoimagen rounded-circle" height="100px" width="100px">
+                    </div>
+                    <div class="card-block">
+                        <h4 class="card-title">Angel Amaurys Mateo</h4>
+                        <p class="card-text">Desarrollador de software orgulloso de su trabajo</p>
+                    </div>
+                    <div class="card-footer text-center">
+                        <a href="https://web.facebook.com/AmaurysMateo23"><i class="fa fa-facebook mx-2"></i></a>
+                        <a href="https://www.instagram.com/amaurysmateo/"><i class="fa fa-instagram mx-2"></i></a>
+                        <a href="https://www.youtube.com"><i class="fa fa-youtube-play mx-2"></i></a>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+        <div class="inner contact">
+            <!-- Form Area -->
+            <div class="contact-form">
+                <!-- Form -->
+                <form id="contact-us" method="post" action="#">
+                    <!-- Left Inputs -->
+                    <div class="col-xs-6 wow animated slideInLeft" data-wow-delay=".5s">
+                        <!-- Name -->
+                        <input type="text" name="name" id="name" required="required" class="form" placeholder="Nombre" />
+                        <!-- Email -->
+                        <input type="email" name="mail" id="mail" required="required" class="form" placeholder="Email" />
+                        <!-- Subject -->
+                        <input type="text" name="subject" id="subject" required="required" class="form" placeholder="Asunto" />
+                    </div><!-- End Left Inputs -->
+                    <!-- Right Inputs -->
+                    <div class="col-xs-6 wow animated slideInRight" data-wow-delay=".5s">
+                        <!-- Message -->
+                        <textarea name="message" id="message" class="form textarea" placeholder="Mensajee"></textarea>
+                    </div><!-- End Right Inputs -->
+                    <!-- Bottom Submit -->
+                    <div class="relative fullwidth col-xs-12">
+                        <!-- Send Button -->
+                        <button type="submit" id="submit" name="submit" class="form-btn semibold">Enviar mensaje</button>
+                    </div><!-- End Bottom Submit -->
+                    <!-- Clear -->
+                    <div class="clear"></div>
+                </form>
+                <!-- Your Mail Message -->
+                <div class="mail-message-area">
+                    <!-- Message -->
+                    <div class="alert gray-bg mail-message not-visible-message">
+                        <strong>Gracias !</strong> tu email se ha enviado.
+                    </div>
+                </div>
+            </div><!-- End Contact Form Area -->
+        </div><!-- End Inner -->
+        <center> <a href="http://shuvohabib.com" target="blank"A&C Solution</a> </center>
+    </div>
+    <script src="~/js/jquery-3.4.1.min.js"></script>
+    <script src="~/js/tether.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>

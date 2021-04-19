@@ -1,0 +1,228 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Site</title>
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/style.css" rel="stylesheet" />
+    <link href="~/css/font.css" rel="stylesheet" />
+    <link href="~/css/main.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container-fluid" style="overflow: hidden;">
+        <!--Header-->
+        <div class="row">
+            <nav class="navbar navbar-expand-lg navbar-light w-100">
+                <a class="navbar-brand" href="#"> <img src="~/img/WhatsApp Image 2021-04-15 at 2.05.01 AM.jpeg" />A&C Solution</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" @Html.ActionLink("INICIO", "Home", "Home")</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" @Html.ActionLink("SOFTWARE", "Productos", "Home")</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                OTROS SERVICIOS
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" @Html.ActionLink("DESARROLLO WEB", "Web", "Home")</a>
+                                <a class="dropdown-item" @Html.ActionLink("DESARROLLO DE PROGRAMAS", "programas", "Home")</a>
+                                <a class="dropdown-item" @Html.ActionLink("DESARROLLO DE APP MOVILES", "aplicaciones", "Home")</a>
+                                <a class="dropdown-item" @Html.ActionLink("CURSOS DE PROGRAMACION", "cursoP", "Home")</a>
+                                <a class="dropdown-item" @Html.ActionLink("CURSOS DE ASP.WEB CORE", "cursoW", "Home")</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" @Html.ActionLink("SOPORTE TECNICO", "soporte", "Home")</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" @Html.ActionLink("NOSOTROS", "Nosotros", "Home")</a>
+                        </li>
+
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">BUSCAR</button>
+                        <a class="btn btn-outline-success my-2 my-sm-0" href="Index" style="background-color:yellow">Cerrar Secion</a>
+                    </form>
+                </div>
+            </nav>
+        </div>
+        <!--End Header-->
+        <div class="container p-0">
+            <div class="row">
+                <div class="card m-2" style="width: 20rem; background-color: #605d5d; color: white;">
+
+                    <img src="~/img/servicios/cursoprogramas.png" style="width: 100%;height: 300px;" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <span class="card-title">CURSOS DE PROGRAMACION DE A&C Solution</span>
+                        <br>
+                        <span class="card-text" style="font-size: 0.8em;color:rgba(255,255,255,0.5);"><strong>A&C Solution S.A</strong></span>
+
+                    </div>
+                </div>
+                <div class="card m-2" style="width: 45rem; background-color: #605d5d; color: white;">
+                    <!-- para esta secion estaria el detalle de cada programa-->
+                    <div class="card-body">
+                        <strong>
+                            <span class="card-title">CURSOS DE PROGRAMACION WEB DE A&C Solution</span>
+                        </strong>
+                        <br>
+                        <br>
+                        <div class="row">
+                            <strong>
+                                <span class="card-title" style="color:cornflowerblue">  LENGUAJES QUE ENSEÑAMOS:  </span>
+                            </strong>
+                            <span class="card-title">ASP .NET, PHP , JAVASCRIPS,J QUERY, HTML 5, CSS, ADMINISTRACION DE BASE DE DATOS EN LA NUBE</span>
+                            <br>
+                        </div>
+                        <strong>
+                            <span class="card-title" style="color:cornflowerblue">LLAMANOS PARA MAS INFORMACION</span>
+                        </strong>
+                        <br>
+                        <div class="row">
+                            <a href="#" class="btn btn-primary w-50" data-toggle="modal" data-target="#exampleModal" style="color: white;background-color:lawngreen;font-weight: 700;">MOVISTAR: 829-000-0000</a>
+                            <a href="#" class="btn btn-primary w-50" data-toggle="modal" data-target="#exampleModal" style="color: white;background-color:red;font-weight: 700;">CLARO: 829-000-0000</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer" style="margin:0">
+                <!--INICIO Footer 2-->
+                <footer class="page-footer font-small blue pt-4" style="color: white;">
+
+                    <!-- Footer Links -->
+                    <div class="container-fluid text-center text-md-left">
+
+                        <!-- Grid row -->
+                        <div class="row">
+
+                            <!-- Grid column -->
+                            <div class="col-md-6 mt-md-0 mt-3">
+
+                                <!-- Content -->
+                                <h5 class="text-uppercase">NUESTRAS REDES SOCIALES</h5>
+                                <p>CONTACTANOS PARA MAS INFORMACION ACERCA DE NUESTROS PROYECTOS</p>
+
+                            </div>
+                            <!-- Grid column -->
+
+                            <hr class="clearfix w-100 d-md-none pb-3">
+
+                            <!-- Grid column -->
+                            <div class="col-md-3 mb-md-0 mb-3">
+
+                                <!-- Links -->
+                                <h5 class="text-uppercase">ENCUENTRANOS EN</h5>
+
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a href="#!">Facebook</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!">WHATSAPP</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!">CORREO</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!">TELEFONO</a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                            <!-- Grid column -->
+                            <!-- Grid column -->
+                            <div class="col-md-3 mb-md-0 mb-3">
+
+                                <!-- Links -->
+                                <h5 class="text-uppercase">CONTANTENOS</h5>
+
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a href="#!">A&CSolution</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!">829-000-0000</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!">A&CSolution@gmail.com</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!">809-000-0000</a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                            <!-- Grid column -->
+
+                        </div>
+                        <!-- Grid row -->
+
+                    </div>
+                    <!-- Footer Links -->
+                  
+                </footer>
+            </div>
+            <div id="overlay" style="display: none; position: absolute; top: 0; left: 0; width: 100%; height: 242%; background: black; opacity: 0.5;">
+            </div>
+            <div id="sidebar" class="fadeIn animated" style="display: none;position: absolute; top: 0; right: 0; width: 35%; height: 242%; background:gray;">
+                <ul>
+                    <li>hola</li>
+                    <li>prueba</li>
+                </ul>
+                <button onclick="cerrar_sidebar()">
+                    Cerrar Sidebar
+                </button>
+            </div>
+        </div>
+        <!-- CONTACTENOS ICONOS-->
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">
+            <div class="social-bar">
+                <a href="https://www.facebook.com" class="icon icon-facebook" target="_blank"></a>
+                <a href="https://twitter.com" class="icon icon-twitter" target="_blank"></a>
+                <a href="https://www.youtube.com" class="icon icon-youtube" target="_blank"></a>
+                <a href="https://www.instagram.com" class="icon icon-instagram" target="_blank"></a>
+            </div>
+            © 2021 Copyright:
+            <a href="https://mdbootstrap.com/education/bootstrap/">A&C Solution</a>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Upps..</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        PARA VER MAS CONTENIDO TENDRAS QUE INICIAR SECION
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">CERRAR</button>
+                        <button type="button" class="btn btn-primary">INICIAR SECION</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="~/js/sidebar.js"></script>
+        <script src="~/js/jquery-3.4.1.min.js"></script>
+        <script src="~/js/bootstrap.min.js"></script>
+</body>
+</html>
+

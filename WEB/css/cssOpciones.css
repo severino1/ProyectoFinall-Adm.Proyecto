@@ -1,0 +1,16 @@
+﻿body {
+    background-color: #222a23;
+    color:white;
+    
+}
+h2{
+    color:cyan
+
+}
+h2{
+    color:yellow!important;
+}
+.btn{
+    background-color:cyan;
+    color:black;
+}

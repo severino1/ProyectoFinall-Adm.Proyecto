@@ -1,0 +1,50 @@
+﻿@model WEB.Models.Usuario
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/style.css" rel="stylesheet" />
+    <link href="~/css/card.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="foto">
+        <div class="card">
+            <div class="container">
+                @using (Html.BeginForm("login", "Home", FormMethod.Post))
+            {
+                    <img src="~/img/unnamed.png" style="width:100%" />
+                    <div class="form-group">
+                        <a class="navbar-brand">Ingresa tu email</a>
+                        @Html.TextBoxFor(x => x.Correo, new { @class = "form-control", type = "text", maxlength = "20", name = "correo", placeholder = "Ingrese_correo", required = "required" })
+                    </div>
+                    <div class="form-group">
+                        <a class="navbar-brand">Ingresa tu Contraseña</a>
+                        @Html.TextBoxFor(x => x.Contraseña, new { @class = "form-control", type = "password", maxlength = "6", name = "password", placeholder = "Contraseña", required = "required" })
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+
+                    </div>
+                }
+                @if (ViewBag.mensaje != null)
+                {  
+                    <div class="alert alert-danger">@ViewBag.mensaje</div>
+                }
+            </div>
+            <div class="container">
+                <a class="btn btn-primary" style="color:yellow;font-weight:700;" @Html.ActionLink("Crear un Nuevo Usuario", "Create", "Usuarios")</a>
+            </div>
+        </div>
+    </div>
+    
+   
+</body>
+<script src="~/js/sidebar.js"></script>
+<script src="~/js/jquery-3.4.1.min.js"></script>
+<script src="~/js/bootstrap.min.js"></script>
+</html>
+
